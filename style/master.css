@@ -1,0 +1,41 @@
+body {
+	background-color: #564438;
+	margin-top: 120px;
+	font-size: 14px;
+	color: white;
+}
+
+.title {
+	font-size: 36px;
+	margin-bottom: 40px;
+}
+
+.menu {
+	margin-left: 30px;
+}
+
+.menu_item {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+.desc {
+	margin-left: 15px;
+	color: grey;
+}
+
+.menu_item a {
+	color: white;
+	text-decoration: none;
+}
+
+.menu_item a:hover {
+	text-decoration: none;
+	color: grey;
+}
+
+.divider {
+	font-size: 18px;
+	color: grey;
+	margin-bottom: 10px;
+}
