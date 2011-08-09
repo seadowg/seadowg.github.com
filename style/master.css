@@ -1,11 +1,12 @@
 body {
-	background-color: #564438;
+	background-color: #606061;
 	margin-top: 120px;
 	font-size: 14px;
 	color: white;
 }
 
 .title {
+	text-shadow: black 0 0 1px;	
 	font-size: 36px;
 	margin-bottom: 40px;
 }
@@ -21,21 +22,23 @@ body {
 
 .desc {
 	margin-left: 15px;
-	color: grey;
+	color: #909090;
+	display: none;
 }
 
 .menu_item a {
+	text-shadow: black 0 0 1px;
 	color: white;
 	text-decoration: none;
 }
 
 .menu_item a:hover {
+	text-shadow: #EEE 0 0 3px;
 	text-decoration: none;
-	color: grey;
 }
 
 .divider {
 	font-size: 18px;
-	color: grey;
+	color: #909090;
 	margin-bottom: 10px;
 }
