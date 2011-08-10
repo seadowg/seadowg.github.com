@@ -22,7 +22,6 @@ body {
 
 .desc {
 	margin-left: 15px;
-	color: #909090;
 	display: none;
 }
 
@@ -39,6 +38,9 @@ body {
 
 .divider {
 	font-size: 18px;
-	color: #909090;
 	margin-bottom: 10px;
+}
+
+.comment {
+	color: #909090;
 }
