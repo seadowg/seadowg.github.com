@@ -1,10 +1,10 @@
 @font-face{ 
 	font-family: 'railway';
-	src: url('webfontkit/railway_thin-webfont.eot');
-	src: url('webfontkit/railway_thin-webfont.eot?#iefix') format('embedded-opentype'),
-	     url('webfontkit/railway_thin-webfont.woff') format('woff'),
-	     url('webfontkit/railway_thin-webfont.ttf') format('truetype'),
-	     url('webfontkit/railway_thin-webfont.svg#webfont') format('svg');
+	src: url('webfontkit/raleway_thin-webfont.eot');
+	src: url('webfontkit/raleway_thin-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('webfontkit/raleway_thin-webfont.woff') format('woff'),
+	     url('webfontkit/raleway_thin-webfont.ttf') format('truetype'),
+	     url('webfontkit/raleway_thin-webfont.svg#webfont') format('svg');
 }
 
 body {
@@ -16,8 +16,8 @@ body {
 
 .title {
 	font-family: 'railway';
-	text-shadow: black 0 0 1px;	
 	font-size: 36px;
+	text-shadow: black 0 0 0.5px;
 	margin-bottom: 40px;
 }
 
