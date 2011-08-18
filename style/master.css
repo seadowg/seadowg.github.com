@@ -17,7 +17,7 @@ body {
 .title {
 	font-family: 'railway';
 	font-size: 36px;
-	text-shadow: black 0 0 0.5px;
+	text-shadow: white 0 0 0px;
 	margin-bottom: 40px;
 }
 
