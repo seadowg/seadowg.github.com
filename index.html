@@ -8,11 +8,10 @@
       $(document).ready(function() {
         var set = $('.menu_item').children('a');
         set.mouseover(function() {
-          set.stop();
           $(this).parent().children('.desc').show('fast');
         });
         set.mouseout(function() {
-          $('.desc').hide('hide');
+          //$('.desc').hide('hide');
         });
         set.click(function() {
           $('.desc').hide('hide');
