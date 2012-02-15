@@ -26,7 +26,6 @@ body {
 }
 
 .menu_item {
-	height: 27px;
 	font-size: 18px;
 	margin-bottom: 10px;
 }
@@ -54,4 +53,8 @@ body {
 
 .comment {
 	color: #909090;
+}
+
+.popin {
+  margin-left: 35px;
 }
