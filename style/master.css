@@ -21,8 +21,9 @@ body {
 	margin-bottom: 40px;
 }
 
-.menu {
-	margin-left: 30px;
+.title .comment {
+  font-size: 27px;
+  text-shadow: none;
 }
 
 .menu_item {
