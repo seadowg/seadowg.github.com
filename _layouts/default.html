@@ -24,11 +24,22 @@
       }
 
       a {
-        color: blue;
+        color: rgb(9, 105, 218);
       }
 
       .title {
         margin-bottom: 2em;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          color: white;
+          background: rgb(34, 39, 46)
+        }
+
+        a {
+          color: rgb(83, 155, 245);
+        }
       }
     </style>
   </head>
