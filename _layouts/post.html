@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<!--
+                    _
+                   | |
+ ___  ___  __ _  __| | _____      ____ _
+/ __|/ _ \/ _` |/ _` |/ _ \ \ /\ / / _` |
+\__ \  __/ (_| | (_| | (_) \ V  V / (_| |
+|___/\___|\__,_|\__,_|\___/ \_/\_/ \__, |
+                                    __/ |
+                                   |___/
+
+ -->
+
+<html lang="html">
+  <head>
+    <title>{{ page.title }}</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Callum Stott is a senior software engineer and XP/Lean consultant with a focus on Android and full stack web development based in London.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        margin: 2em;
+        font-family: sans-serif;
+      }
+
+      a {
+        color: rgb(9, 105, 218);
+      }
+
+      .title {
+        margin-bottom: 2em;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          color: white;
+          background: rgb(34, 39, 46)
+        }
+
+        a {
+          color: rgb(83, 155, 245);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>{{ page.title }}</h1>
+    <a href="/posts.html">< all posts</a href>
+    {{ content }}
+  </body>
+</html>
