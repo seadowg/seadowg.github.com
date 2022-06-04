@@ -22,6 +22,13 @@
       body {
         margin: 2em;
         font-family: sans-serif;
+        max-width: 800px;
+      }
+
+      .content {
+        font-family: serif;
+        font-size: 1.2em;
+        line-height: 1.5em;
       }
 
       a {
@@ -30,6 +37,12 @@
 
       .title {
         margin-bottom: 2em;
+      }
+
+      .responsive {
+        width: 100%;
+        height: auto;
+        max-width: 800px;
       }
 
       @media (prefers-color-scheme: dark) {
@@ -47,6 +60,8 @@
   <body>
     <h1>{{ page.title }}</h1>
     <a href="/posts.html">< all posts</a href>
-    {{ content }}
+    <div class="contents">
+      {{ content }}
+    </div>
   </body>
 </html>
