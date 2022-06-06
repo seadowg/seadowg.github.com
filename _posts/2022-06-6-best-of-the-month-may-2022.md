@@ -5,7 +5,7 @@ title:  "Monthly roundup: May 2022"
 
 # 🎸
 
-I've been getting my right-hand chops back (mainly by playing along with [Lamb of God's "Ruin"](https://open.spotify.com/track/3WeWaUyTww9gLKmimlwm5w?si=0e9f4eba9b804f75){:target="_blank"}) in preparation for recording some more of the album my band (still unnamed) is hoping to release later this year.
+I've been getting my right-hand chops back (mainly by playing along with [Lamb of God's "Ruin"](https://open.spotify.com/track/3WeWaUyTww9gLKmimlwm5w?si=0e9f4eba9b804f75){:target="_blank"} over and over again) in preparation for recording some more of the album my band (still unnamed) is hoping to release later this year.
 
 I've also been planning a release of a weird ambient/dubstep/black metal piece as part of my [La Petite Mort project](https://lapetitemortuk.bandcamp.com/){:target="_blank"} - I'm hoping to have that out by the end of June.
 
@@ -15,7 +15,7 @@ Mizmor & Thou's Myopia is most definitely my album of the month:
 
 <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3344058140/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://gileadmedia.bandcamp.com/album/myopia">Myopia by Mizmor &amp; Thou</a></iframe>
 
-I missed the performance of this at Roadburn (it clashed with Amnesia Scanner and HEALTH), so I can now add that to my list of Roadburn regrets along with Thou and Emma Ruth Rundle, Thou and The Body and pretty much any other Thou set I stupidly didn't go to.
+I missed the performance of this at Roadburn (it clashed with Amnesia Scanner and HEALTH), so I can now add that to my list of Roadburn regrets along with Thou and Emma Ruth Rundle, Thou and The Body and pretty much any other Thou set that I stupidly didn't go to.
 
 # 👨‍💻
 
@@ -31,4 +31,4 @@ Not a lot of wine this month. However, I did end up drinking a whole load of gre
 
 # 🎲
 
-I managed to pick up one of the older Arkham Horror LCG scenario packs ["Murder at the Excelsior Hotel"](https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/murder-excelsior-hotel/){:target="_blank"} in Dice Saloon in Brighton while I was there teching for my sister's show "Yolk". It's probably one of the tighter (and hopefully more re-playable) experiences with that game.
+I managed to pick up one of the older Arkham Horror LCG scenario packs ["Murder at the Excelsior Hotel"](https://www.fantasyflightgames.com/en/products/arkham-horror-the-card-game/products/murder-excelsior-hotel/){:target="_blank"} at Dice Saloon in Brighton while I was there teching for my sister's show "Yolk". It's probably one of the tighter (and hopefully more re-playable) experiences with that game. I'd definitely recommend it if you can find a copy.
