@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Monthly roundup: May 2022"
+description: "Thou shalt not miss a Thou set again"
 ---
 
 # 🎸
