@@ -4,3 +4,6 @@ description: Callum Stott is a senior softare engineer and XP/Lean consultant wi
 
 plugins:
   - jekyll-feed
+
+exclude:
+  - scripts
