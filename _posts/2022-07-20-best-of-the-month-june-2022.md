@@ -6,7 +6,7 @@ description: "Better late than never"
 
 # 🎸
 
-Jen's folks are hosting their mini garden festival "Walkerman" in a month or so and my siblings have decided to unveil our family Weezer cover band: Steezer. This means I've spent most of my guitar time learning stuff off the [Blue Album](https://en.wikipedia.org/wiki/Weezer_(Blue_Album)){:target="_blank"}.
+Jen's folks are hosting their mini garden festival "Walkerman" in a month or so, and my siblings and I have decided to unveil our family Weezer cover band: Steezer. This means I've spent most of my guitar time learning stuff off the [Blue Album](https://en.wikipedia.org/wiki/Weezer_(Blue_Album)){:target="_blank"}.
 
 I missed the mark on getting any new music out last month as I had to tweak some artwork, but that's now taken care of. I'll be releasing a new album/very long single this month (July):
 
@@ -14,7 +14,7 @@ I missed the mark on getting any new music out last month as I had to tweak some
 
 # 🎧
 
-I picked up a higher (than my 256kpbs MP3 I presumably had on my Creative Zen) quality of Reuben's "In Nothing We Trust" which I had on repeat throughout June:
+I picked up a higher (than the 256kpbs MP3s I presumably had on my Creative Zen) quality of Reuben's "In Nothing We Trust" which I had on repeat throughout June:
 
 <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=2380121451/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://bsmrocks.bandcamp.com/album/in-nothing-we-trust-2">In Nothing We Trust by Reuben</a></iframe>
 
