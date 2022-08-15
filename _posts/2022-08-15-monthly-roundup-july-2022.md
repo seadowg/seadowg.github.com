@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Monthly roundup: July 2022"
-description: ""
+description: "In my garage, I've got Pet Nats"
 ---
 
 # 🎸
