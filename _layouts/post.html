@@ -28,6 +28,9 @@
       body {
         margin: 2em;
         font-family: sans-serif;
+      }
+
+      .container {
         max-width: 800px;
       }
 
@@ -94,16 +97,24 @@
           background: rgba(99, 110, 123);
         }
       }
+
+      @media only screen and (min-width: 1280px) {
+        .container {
+          margin: auto;
+        }
+      }
     </style>
   </head>
   <body>
-    <h1>{{ page.title }}</h1>
-    <div class="subtitle">
-      {{ page.description | markdownify }}
-    </div>
-    <a href="/posts.html">< all posts</a href>
-    <div class="contents">
-      {{ content }}
+    <div class="container">
+      <h1>{{ page.title }}</h1>
+      <div class="subtitle">
+        {{ page.description | markdownify }}
+      </div>
+      <a href="/posts.html">< all posts</a href>
+      <div class="contents">
+        {{ content }}
+      </div>
     </div>
   </body>
 </html>
