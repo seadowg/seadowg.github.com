@@ -14,7 +14,7 @@ For this post, I thought I'd just write out a few workflows I use for dealing wi
 
 Anyway, we're going to start right at the beginning: 
 
-### Starting work on your first PR for a project
+## Starting work on your first PR for a project
 
 **Scenario:**
 
@@ -28,7 +28,7 @@ Anyway, we're going to start right at the beginning:
 - **DON'T START YOUR WORK ON MASTER.** Create a new branch off `master` with `git checkout -b <branch-name>`
 - Create the branch in your remote repo (fork) with `git push -u origin <branch-name>`
 
-### Creating a PR
+## Creating a PR
 
 **Scenario:**
 
@@ -44,7 +44,7 @@ Anyway, we're going to start right at the beginning:
 - Make sure to answer any questions that the PR template asks (not doing so is a great way to annoy people)
 - Once you've described your changes hit "Create pull request" or if you're note ready for review (you're going to make more changes or want earlier feedback) hit the dropdown on that button and then "Create draft pull request"
 
-### Starting work on a new PR
+## Starting work on a new PR
 
 **Scenario:**
 
@@ -60,7 +60,7 @@ Anyway, we're going to start right at the beginning:
 - If the above fails it means your master has conflicting changes. In this scenario it's most likely that you've accidentally been committing to on top of `master`
 - Create a new feature branch with `git checkout -b <branch-name>`
 
-### Updating a PR when it has conflicts with master
+## Updating a PR when it has conflicts with master
 
 **Scenario:**
 
@@ -74,7 +74,7 @@ Anyway, we're going to start right at the beginning:
 
 OK those are the "basics". The next section is mainly going to deal with "dependent PRs" - when you have one pull request that uses a feature branch that is based off **another feature branch** rather than `master`. You should avoid this at all costs, but sometimes it's necessary when working on dependent changes while earlier ones are reviewed.
 
-### Updating dependent PR  after original merged to master
+## Updating dependent PR  after original merged to master
 
 **Scenario:**
 
@@ -86,7 +86,7 @@ OK those are the "basics". The next section is mainly going to deal with "depend
 - Update `master` (with a `git pull upstream/master`) and then perform a `git rebase master` in PR #2's branch
 - Update PR #2 with `git push -f` - you'll see the number of commits reduce
 
-### Updating dependent PR once original changed
+## Updating dependent PR once original changed
 
 **Scenario:**
 
@@ -99,7 +99,7 @@ OK those are the "basics". The next section is mainly going to deal with "depend
 - Perform a `git rebase <pr-1-branch>` in PR #2's branch
 - Update PR with `git push -f`
 
-### Updating dependent PR after original is rebased
+## Updating dependent PR after original is rebased
 
 **Scenario:**
 
@@ -113,7 +113,7 @@ OK those are the "basics". The next section is mainly going to deal with "depend
 - Perform `git rebase --onto <pr-1-branch> <commit-sha>~1`
 - `commit-sha` is the SHA for the first commit in PR #2
 
-### Updating dependent PR after original merged as a single commit (squashed)
+## Updating dependent PR after original merged as a single commit (squashed)
 
 **Scenario:**
 
@@ -127,7 +127,7 @@ OK those are the "basics". The next section is mainly going to deal with "depend
 - Perform `git rebase --onto master <commit-sha>~1`
 - `commit-sha` is the SHA for the first commit in PR #2
 
-### Creating a hotfix from a set of specific merged PRs
+## Creating a hotfix from a set of specific merged PRs
 
 **Scenario:**
 
