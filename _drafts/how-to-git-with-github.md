@@ -1,4 +1,8 @@
-# How to Git with Github
+---
+layout: post
+title: "How to Git with Github"
+description: "A few workflows I use for dealing with situations in ascending order of insanity"
+---
 
 *Disclaimer: At the time of writing, [the default Git branch name is still `master`](https://sfconservancy.org/news/2020/jun/23/gitbranchname/) so this post will use `master` instead of `main`. Hopefully I can come back and change that later once `main` (which seems to be gaining traction as the new standard) has become the default.*
 
