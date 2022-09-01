@@ -1,5 +1,7 @@
 # How to Git with Github
 
+*Disclaimer: At the time of writing, [the default Git branch name is still `master`](https://sfconservancy.org/news/2020/jun/23/gitbranchname/) so this post will use `master` instead of `main`. Hopefully I can come back and change that later once `main` (which seems to be gaining traction as the new standard) has become the default.*
+
 I've contributed to and helped maintain a few different open source projects at this point ([ODK Collect](https://github.com/opendatakit/collect), [Postfacto](https://github.com/pivotal/postfacto), [Robolectric](https://github.com/robolectric/robolectric) etc) and something I've noticed is that people run into problems with Git. Crazy right? Git? Confusing? No way!
 
 Git is a "sharp tool". That's software engineer speak for "I already learned this, and now you need to".  Github doesn't do an amazing job of taming it and, although Pull Requests are an important and valuable part of open source work, they can land you in even more treacherous waters.
@@ -27,11 +29,11 @@ Anyway, we're going to start right at the beginning:
 **Scenario:**
 
 - We've finished our work and want to contribute it back to the project
-- We want to create a Pull Request that the project maintainers can review and  merge
+- We want to create a Pull Request that the project maintainers can review and merge
 
 **Steps:**
 
-- Make sure your remote branch is up to date with `git push <branch-name>`
+- Make sure your remote branch is up-to-date with `git push <branch-name>`
 - Go to the project's page and hit "New Pull Request"
 - If there is a link to "compare across forks" click that
 - Select your fork as "head repository" and your branch as "compare"
@@ -44,7 +46,7 @@ Anyway, we're going to start right at the beginning:
 
 - We've already forked the project and cloned it locally
 - We've made PRs to the project before or have one in review already
-- We need to make sure our local `master` is up to date (with the project's) and start  a new feature branch
+- We need to make sure our local `master` is up-to-date (with the project's) and start  a new feature branch
 
 **Steps:**
 
@@ -66,7 +68,7 @@ Anyway, we're going to start right at the beginning:
 - Update `master` (with a `git pull upstream/master`) and then perform a `git rebase master` in PR's branch and solve conflicts as they come up
 - Update PR with `git push -f`
 
-Ok those are the "basics". The next section is mainly going to deal with "dependent PRs" - when you have one pull request that uses a feature branch that is based off **another feature branch**  rather than `master`. You should avoid this at all costs but sometimes it's necessary when working on dependent changes while earlier ones are reviewed.
+OK those are the "basics". The next section is mainly going to deal with "dependent PRs" - when you have one pull request that uses a feature branch that is based off **another feature branch** rather than `master`. You should avoid this at all costs, but sometimes it's necessary when working on dependent changes while earlier ones are reviewed.
 
 ### Updating dependent PR  after original merged to master
 
@@ -104,22 +106,22 @@ Ok those are the "basics". The next section is mainly going to deal with "depend
 
 **Steps:**
 
-- Perform `git rebase --onto <pr-1-branch> <commit-sha>`
-- `commit-sha` is the commit SHA for the commit BEFORE everything you want to rebase on top - basically this should be the commit that's the top of PR #1, but the old SHA for that commit that's in PR #2.
+- Perform `git rebase --onto <pr-1-branch> <commit-sha>~1`
+- `commit-sha` is the SHA for the first commit in PR #2
 
-### Updating dependent PR after original merged as a single commit
+### Updating dependent PR after original merged as a single commit (squashed)
 
 **Scenario:**
 
-- PR #1 merged into `master` as a single commit
+- PR #1 squashed onto `master` as a single commit
 - PR #2 includes commits from PR #1 before merge that now don't exist on `master`
 - We need to rebase PR #2 on top of `master` but not include the old commits from PR #1
 - To do this we need to rebase onto the master branch but choose a new "base commit" to rebase from - basically "rebase everything here after this commit onto this branch"
 
 **Steps:**
 
-- Perform `git rebase --onto master <commit-sha>`
-- `commit-sha` is the commit SHA for the commit BEFORE everything you want to rebase on top - basically this should be the commit that's the top of PR #1
+- Perform `git rebase --onto master <commit-sha>~1`
+- `commit-sha` is the SHA for the first commit in PR #2
 
 ### Creating a hotfix from a set of specific merged PRs
 
