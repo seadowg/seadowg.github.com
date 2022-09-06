@@ -3,7 +3,7 @@ title: Callum's Posts
 layout: default
 ---
 
-<h1>{{ page.title }}</h1>
+<h1>{{ page.title }} <a href="/feed.xml"><img src="/assets/img/rss.png" style="width: 0.8em; height: 0.8em;"/></a></h1>
 
 {% for post in site.posts %}
   <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
