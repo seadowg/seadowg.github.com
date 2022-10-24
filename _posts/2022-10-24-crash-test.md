@@ -3,10 +3,10 @@ layout: post
 title:  "Android's Restart On Crash Behaviour"
 description: ""
 tweets:
-    - "I've done some digging into Android's crash behaviour and found something weird..."
-    - "Android will occasionally (depending how well behaved your app is) restart your app's process automatically. This is all well and good, but it will restore the back stack WITHOUT THE ACTIVITY THAT WAS ON TOP"
+    - "I've done some digging into #android's crash behaviour and found something weird..."
+    - "Android will occasionally (depending on how well-behaved your app is) restart your app's process automatically. This is all well and good, but it will restore the back stack WITHOUT THE ACTIVITY THAT WAS ON TOP."
     - "I'd actually not realized that this restart behaviour existed, let alone that you'd end up sending the user to a different place than where they experienced the crash. Perhaps this was all obvious to other people though?"
-    - "Anyway, more details in my post at [https://seadowg.com/2022/10/24/crash-test.html]. If anyone has a links to official docs on this I'd to see them."
+    - "Anyway, more details in my post at https://seadowg.com/2022/10/24/crash-test.html. If anyone has links to official docs on this I'd to see them."
 ---
 
 Usually, when an uncaught `Exception` occurs in an Android app process, the user is shown a dialog by the system informing them that the app has "stopped" or "crashed". If the user hits "Close app" (or just dismisses the dialog) the process is killed.
