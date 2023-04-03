@@ -5,5 +5,8 @@ description: Callum Stott is a senior software engineer and XP/Lean consultant w
 plugins:
   - jekyll-feed
 
+# Include these files/folders that are excluded by default
+include: [ "/.well-known" ]
+
 exclude:
   - scripts
