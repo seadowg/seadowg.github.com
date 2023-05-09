@@ -6,7 +6,9 @@ description: "Drop the \"The\". Just \"Cluck\". It's cleaner."
 
 # 🎸
 
-I finally got "Bow, East" onto streaming services. I originally put the release up on Bandcamp last year and then discovered that Spotify, Apple Music etc will not except a single track release where the track and release title don't match. I did what anyone would do - huffed. I then spent almost a year spinning my wheels about if I should give in and rename the track, or add a silent track, or split the single track or any other of a thousand alternatives. I ended up biting the bullet and splitting the single track into three which does fit pretty well given the composition has three "movements". Anyway, links to the release on different streaming services can be found [here](https://distrokid.com/hyperfollow/lapetitemort/bow-east-2){:target="_blank"}.
+I finally got "Bow, East" onto streaming services. I originally put the release up on Bandcamp last year and then discovered that Spotify, Apple Music etc will not except a single track release where the track and release title don't match. I did what anyone would do - huffed. 
+
+I then spent almost a year spinning my wheels about if I should give in and rename the track, or add a silent track, or split the single track or any other of a thousand alternatives. I ended up biting the bullet and splitting the single track into three which does fit pretty well given the composition has three "movements". Anyway, links to the release on different streaming services can be found [here](https://distrokid.com/hyperfollow/lapetitemort/bow-east-2){:target="_blank"}.
 
 # 🎧
 
