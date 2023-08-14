@@ -100,13 +100,18 @@ initial.saveInstanceState(outState)
     .stop()
     .destroy()
         
-val recreated = Robolectric.buildActivity(MyActivity::class.java, this.intent).create(outState)
-            .start()
-            .restoreInstanceState(outState)
-            .postCreate(outState)
+val recreated = Robolectric.buildActivity(MyActivity::class.java, this.intent)
+    .create(outState)
+    .start()
+    .restoreInstanceState(outState)
+    .postCreate(outState)
 
 val startedActivityForResult = shadowOf(initial.get()).nextStartedActivityForResult
-shadowOf(recreated.get()).receiveResult(startedActivityForResult.intent, resultCode, result)
+shadowOf(recreated.get()).receiveResult(
+    startedActivityForResult.intent, 
+    resultCode, 
+    result
+)
 
 recreated.resume()
         .visible()
@@ -116,3 +121,45 @@ recreated.resume()
 Here we have to manually execute the lifecycle steps that `ActivityController#setup` was handling for us so that we can simulate the result being received (via `ShadowActivity#receiveResult`) between `postCreate` and `onResume`. Like with the examples before, we can simulate the [system recreates process](#system-recreates-process) version of this by inserting our `resetProcess` call before recreating the Activity.
 
 As far as I'm aware, the lifecycle steps and their ordering would be the same here if you opted to use the new [Activity Results API](https://developer.android.com/training/basics/intents/result#launch){:target="_blank"} instead of using the now deprecated `startActivityForResult`/`onActivityResult` directly (which you should if you can).
+
+## Extensions to the rescue
+
+We're at a point where we need a fairly noisy amount of code to simulate these scenarios, and in practice these tests would be very hard to read. I've wrapped all this up in an extension for `ActivityController` to make my (and hopefully your) life a little easier:
+
+```kotlin
+inline fun <reified A : Activity> ActivityController<A>.recreateWithProcessRestore(
+    resultCode: Int? = null,
+    result: Intent? = null,
+    noinline resetProcess: (() -> Unit)? = null
+): ActivityController<A> {
+    // Destroy activity with saved instance state
+    val outState = Bundle()
+    this.saveInstanceState(outState).pause().stop().destroy()
+
+    // Reset process if needed
+    if (resetProcess != null) {
+        resetProcess()
+    }
+
+    // Recreate with saved instance state
+    val recreated = Robolectric.buildActivity(A::class.java, this.intent).create(outState)
+        .start()
+        .restoreInstanceState(outState)
+        .postCreate(outState)
+
+    // Return result
+    if (resultCode != null) {
+        val startedActivityForResult = shadowOf(this.get()).nextStartedActivityForResult
+        shadowOf(recreated.get()).receiveResult(
+            startedActivityForResult.intent,
+            resultCode,
+            result
+        )
+    }
+
+    // Resume activity
+    return recreated.resume()
+        .visible()
+        .topActivityResumed(true)
+}
+```
