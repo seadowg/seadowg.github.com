@@ -163,3 +163,5 @@ inline fun <reified A : Activity> ActivityController<A>.recreateWithProcessResto
         .topActivityResumed(true)
 }
 ```
+
+There was probably a way to do this without `reified`, but what fun would that be?
