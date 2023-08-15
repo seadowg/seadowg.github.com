@@ -23,6 +23,8 @@
     <meta name="twitter:description" content="{{ page.description }}">
     <meta name="twitter:title" content="{{ page.title }}" />
 
+    <link rel="stylesheet" href="/syntax.css">
+
     {% feed_meta %}
     <style>
       body {
@@ -48,17 +50,17 @@
 
       code.highlighter-rouge {
         font-size: 16px;
-        background: rgb(246, 248, 250);
+        background: rgb(214, 216, 218);
         padding: 0.2em 0.4em;
         border-radius: 4px;
         line-height: 1.5em;
       }
 
       .highlight {
-        font-size: 14px;
+        font-size: 16px;
         border-radius: 4px;
         overflow-x: scroll;
-        background: rgb(246, 248, 250);
+        background: #404040;
         padding: 0.2em 0.8em;
         line-height: 1.5em;
       }
@@ -101,14 +103,11 @@
         }
 
         code.highlighter-rouge {
-          font-size: 14px;
+          font-size: 16px;
           background: rgb(99, 110, 123);
           padding: 0.2em 0.4em;
           border-radius: 4px;
-        }
-
-        .highlight {
-          background: rgba(99, 110, 123);
+          line-height: 1.5em;
         }
       }
 
