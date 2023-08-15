@@ -28,7 +28,8 @@ As far as I've seen, this is the only Activity recreation scenario that's been [
 Here's how to simulate this scenario using Robolectric:
 
 ```kotlin
-val activityController = Robolectric.buildActivity(MyActivity::class.java).setup()
+val activityController = Robolectric.buildActivity(MyActivity::class.java)
+    .setup()
 activityController.recreate()
 ```
 
@@ -48,14 +49,16 @@ Like with [configuration changes](#configuration-changes), `onSaveInstanceState`
 Because the `ActivityContoller` and `ActivityScenario` `recreate` methods are implemented in such a way that ViewModels are retained (like during [configuration changes](#configuration-changes)), we can't use it to simulate this scenario. Fortunately though, `ActivityController` does give us enough control of the lifecycle to do it ourselves:
 
 ```kotlin
-val initial = Robolectric.buildActivity(MyActivity::class.java).setup()
+val initial = Robolectric.buildActivity(MyActivity::class.java)
+    .setup()
 val outState = Bundle()
 initial.saveInstanceState(outState)
     .pause()
     .stop()
     .destroy()
         
-val recreated = Robolectric.buildActivity(MyActivity::class.java).setup(outState)
+val recreated = Robolectric.buildActivity(MyActivity::class.java)
+    .setup(outState)
 ```
 
 The subtle difference from our [configuration changes](#configuration-changes) example is that we're manually destroying the Activity while retrieving it's saved instance state and then creating a new `ActivityController` with that saved instance state. This will give us a new Activity that uses the old Activity's saved instance state, but will not have access to the old ViewModels. As you might have guessed, an Activity's `FragmentManager` state is persisted as part of the saved instance state bundle, so we also get recreated Fragments here.
@@ -71,7 +74,8 @@ As mentioned earlier, Android will occasionally destroy app processes in the bac
 I'm unable to provide a one-size-fits-all solution to simulating this scenario as what state needs to be reset or initializers that need to be run to simulate the process restart will be different for every app. Here's an example that you can bring your own `resetProcess` implementation along to however:
 
 ```kotlin
-val initial = Robolectric.buildActivity(MyActivity::class.java).setup()
+val initial = Robolectric.buildActivity(MyActivity::class.java)
+    .setup()
 val outState = Bundle()
 initial.saveInstanceState(outState)
     .pause()
@@ -80,7 +84,8 @@ initial.saveInstanceState(outState)
 
 resetProcess()
         
-val recreated = Robolectric.buildActivity(MyActivity::class.java).setup(outState)
+val recreated = Robolectric.buildActivity(MyActivity::class.java)
+    .setup(outState)
 ```
 
 As you might have spotted, this is identical to our [system recreates Activity](#system-recreates-activity) example with the addition of `resetProcess` between our Activity destruction and creation. It's also probably obvious but still worth pointing out that implementing a realistic version of `resetProcess` is always going to be challenging as you might not be aware of every piece static state in your app. I'd definitely suggest putting your app through this scenario manually in an emulator or a test device to discover any problematic state you might have.
@@ -90,7 +95,8 @@ As you might have spotted, this is identical to our [system recreates Activity](
 You forgot about [`Activity#startActivityForResult`](https://developer.android.com/reference/android/app/Activity#startActivityForResult(android.content.Intent,%20int)){:target="_blank"} right? Although it shouldn't cause you any problems during [configuration changes](#configuration-changes), it can add some real headaches to the [system recreates Activity](#system-recreates-activity) and [system recreates process](#system-recreates-process) scenarios. Imagine that `MyActivity` from our examples starts another Activity `ResultActivity` for result. Android could destroy `MyActivity` to reclaim resources while `ResultActivity` is visible, or it might even destroy the whole process if the user navigates away. When `ResultActivity` returns the result after either of these scenarios, `onActivityResult` will be called after `MyActivity#onCreate` is called during recreation which might get you in trouble if you're loading state you expected to have ready already or if you have something important in `Activity#onResume`. Again, we can fortunately simulate this with some (arguably far nastier) Robolectric:
 
 ```kotlin
-val initial = Robolectric.buildActivity(MyActivity::class.java).setup()
+val initial = Robolectric.buildActivity(MyActivity::class.java)
+    .setup()
 
 // Action to start `ResultActivity` for result
 
@@ -106,7 +112,8 @@ val recreated = Robolectric.buildActivity(MyActivity::class.java, this.intent)
     .restoreInstanceState(outState)
     .postCreate(outState)
 
-val startedActivityForResult = shadowOf(initial.get()).nextStartedActivityForResult
+val startedActivityForResult = shadowOf(initial.get())
+    .nextStartedActivityForResult
 shadowOf(recreated.get()).receiveResult(
     startedActivityForResult.intent, 
     resultCode, 
@@ -142,14 +149,16 @@ inline fun <reified A : Activity> ActivityController<A>.recreateWithProcessResto
     }
 
     // Recreate with saved instance state
-    val recreated = Robolectric.buildActivity(A::class.java, this.intent).create(outState)
+    val recreated = Robolectric.buildActivity(A::class.java, this.intent)
+        .create(outState)
         .start()
         .restoreInstanceState(outState)
         .postCreate(outState)
 
     // Return result
     if (resultCode != null) {
-        val startedActivityForResult = shadowOf(this.get()).nextStartedActivityForResult
+        val startedActivityForResult = shadowOf(this.get())
+            .nextStartedActivityForResult
         shadowOf(recreated.get()).receiveResult(
             startedActivityForResult.intent,
             resultCode,
