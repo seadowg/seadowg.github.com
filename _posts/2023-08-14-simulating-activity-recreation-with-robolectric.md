@@ -18,7 +18,7 @@ As far as I'm aware, there are 3 distinct Activity recreation scenarios:
 
 In this post, I'll attempt to document these scenarios (along with a nasty twist on them) and give examples of how they can be simulated using Robolectric.
 
-## Configuration changes
+### Configuration changes
 
 As far as I've seen, this is the only Activity recreation scenario that's been [well documented](https://developer.android.com/guide/topics/resources/runtime-changes) and can be easily tested using AndroidX Test with instrumentation or local tests. The basic premise here is that when something Android thinks of as "configuration" (like screen size, orientation, dark/light mode etc) changes at the system level, Activity object will be recreated with that new configuration. Before this happens, the system calls [`Activity#onSaveInstanceState`](https://developer.android.com/reference/android/app/Activity#onSaveInstanceState(android.os.Bundle)){:target="_blank"} which creates a `Bundle` that will eventually be passed to [`Activity#onCreate`](https://developer.android.com/reference/android/app/Activity#onCreate(android.os.Bundle)){:target="_blank"} for the new instance of the Activity. That "saved instances state" `Bundle` can therefore be used to persist state between configurations. On top of that there's two pretty big things to keep in mind:
 
@@ -40,7 +40,7 @@ val activityScenario = ActivityScenario.launch(MyActivity::class.java)
 activityScenario.recreate()
 ```
 
-## System recreates Activity
+### System recreates Activity
 
 This can happen if the system wants to reclaim resources (most likely memory) used by an Activity in the background that's been paused/stopped. My understanding (or guess) is that this would only happen if Android wants to reclaim resources from a current "foreground" (on screen) app as it can just destroy the whole process (and then restart them as we'll explore later) for apps in the background. It's easy enough to force this behaviour whenever an Activity is paused by enabling the ["Don't keep Activities" setting in Developer settings](https://developer.android.com/studio/debug/dev-options#apps){:target="_blank"}.
 
@@ -67,7 +67,7 @@ It isn't possible to write a test like this using `ActivityScenario`: we can tea
 
 
 
-## System recreates process
+### System recreates process
 
 As mentioned earlier, Android will occasionally destroy app processes in the background to reclaim memory. This probably happens more than you realize according to [dontkillmyapp.com](https://dontkillmyapp.com){:target="_blank"}. When this happens, the app's process and current back stack is destroyed (with corresponding `Activity#onSaveInstanceState` calls) and then both are recreated when the user navigates back to the app. Because the back stack is recreated, we do again get to keep our saved instance state `Bundle` and our Fragments, but we'll lose ViewModels and any "process" level state (Java `static` or state we've attached to the Android `Application`). You can force this behaviour to happen whenever you switch between apps (the one now in the background will be destroyed) using the ["Background process limit" setting in Developer settings](https://developer.android.com/studio/debug/dev-options#apps){:target="_blank"}. 
 
