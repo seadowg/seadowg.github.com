@@ -24,10 +24,10 @@ class MyWorker(context: Context, workerParams: WorkerParameters) :
             Result.success()
         } catch (t: Throwable) {
             // handle or log exception
-            throw t
+            Result.failure()
         }
     }
 }
 ```
 
-In theory, you could also return `Result.failure()` from the `catch` branch, but that relies on WorkManager's currently undocumented exception handling staying consistent whereas throwing the exception continues to allow WorkManager to do whatever "works" (😁) for it.
+You could also return `Result.retry()` from the `catch` branch if you want work that "explodes" like this to be retried with whatever backoff policy you have configured for it rather than not run again (or wait till the next scheduled time for periodic work).
