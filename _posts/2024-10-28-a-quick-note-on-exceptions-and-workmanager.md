@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "A quick note on exceptions and WorkManager"
-description: ""Silent Crashing""
+description: "\"Silent Crashing\""
 ---
 
 I was recently asked a question about what happens if an error occurs (an unexpected `Exception` is thrown) while running a task in the background using [WorkManager](https://developer.android.com/topic/libraries/architecture/workmanager). I realised I had no idea, so decided to investigate.
