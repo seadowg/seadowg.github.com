@@ -8,8 +8,8 @@ title:  "Configuring Gradle Memory Usage"
 The "simplest" way to configure how much memory Gradle will use is to configure the heap for the JVM process it spawns by passing args with `org.gradle.jvmargs` in `gradle.properties` (either in the project root or in your user's `.gradle` directory which overrides the former):
 
 ```properties
-# Set a maximum heap size of 2048 megabytes
-org.gradle.jvmargs=-Xmx2048m
+# Set a maximum heap size of 4 gigabytes
+org.gradle.jvmargs=-Xmx4g
 ```
 
 There are caveats to this though. If you want to configure Gradle for machines with tighter memory constraints (like a container based CI environment), or to take advantage of a beefier dev machine there a few more possible tweaks you'll want to be aware of:
