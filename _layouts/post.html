@@ -78,6 +78,21 @@
         font-size: 21px;
       }
 
+      .edit-section {
+        font-style: italic;
+        margin-top: 2em;
+        font-size: 21px;
+        line-height: 1.3em;
+        background: rgb(217, 217, 217);
+        padding: 0.8em 1em;
+        border-radius: 4px;
+      }
+
+      .edit-title {
+        font-weight: bold;
+        margin-bottom: 0.2em;
+      }
+
       img {
         border-radius: 0.5%;
       }
@@ -125,6 +140,12 @@
         {{ page.description | markdownify }}
       </div>
       <a href="/posts.html">< all posts</a href>
+      {% if page.edit_date %}
+        <div class="edit-section">
+          <div class="edit-title">This post was last updated on {{ page.edit_date }}:</div>
+          <div>{{ page.edit_reason }}</div>
+        </div>
+      {% endif %}
       <div class="contents">
         {{ content }}
       </div>
