@@ -3,7 +3,7 @@ title: Drive Sync
 layout: docs
 ---
 
-Drive Sync is an application for Supernote devices that helps you move files on and off them using a USB flash drive. This allows you to keep your Supernote's Wi-Fi off at all times increasing the security and privacy of the device as well as it's battery life.
+Drive Sync is an application for Supernote devices that helps you move files on and off them using a USB flash drive. This allows you to keep your Supernote's Wi-Fi off at all times, increasing the security and privacy of the device, as well as it's battery life.
 
 ## Setup
 
@@ -19,7 +19,7 @@ Once the app is installed, it appear in "Apps" (under "My Apps") and can be adde
 
 <img src="/assets/img/permission_prompt.png" class="screenshot"/>
 
-The first time you open the app, you will be asked to grant it permission to manage files. This allows Drive Sync to read and write from your `INBOX`/`EXPORT` and connected USB drives. After tapping "Grant permission" you'll be taken to the "All files access" settings screen:
+The first time you open the app, you will be asked to grant it permission to manage files. This allows Drive Sync to read and write from your `INBOX`/`EXPORT` directories and connected USB drives. After tapping "Grant permission" you'll be taken to the "All files access" settings screen:
 
 <img src="/assets/img/all_files_access_settings.png" class="screenshot"/>
 
@@ -29,11 +29,11 @@ From here you need to click on "Drive Sync", enable "Allow access to manage all 
 
 ### Drive setup
 
-Drive Sync works with any USB drive that the Supernote and the device(s) you want to move files to and from can read. Usually a drive an exFAT formatted drive is the best for this, but it's important to note that the Supernote [does not support drives with special characters in the name](https://support.supernote.com/en_US/Tools-Features/usb-otg).
+Drive Sync works with any USB drive that the Supernote and the device(s) you want to move files to and from can read. Usually an exFAT formatted drive is the best for this, but it's important to note that the Supernote [does not support drives with special characters in the name](https://support.supernote.com/en_US/Tools-Features/usb-otg).
 
 #### Formatting
 
-If you haven't already formatted your USB drive, or it's been formatted with a file system that Supernote does not support (like APFS) you'll need to use a computer to format with exFAT. Follow the steps below to do this in whichever operating system you have.
+If you haven't already formatted your USB drive, or it's been formatted with a file system that the Supernote does not support (like APFS) you'll need to use a computer to format it with exFAT. Follow the steps below to do this in whichever operating system you have.
 
 ##### Windows
 
@@ -79,6 +79,6 @@ Once you've tapped sync and the files have all been moved, you'll be prompted to
 
 <img src="/assets/img/eject_drive_prompt.png" style="max-height: 480px; width: auto; margin-left: auto; margin-right: auto; display: block; margin-top: 1.5em; margin-bottom: 2em;"/>
 
-It is recommended you do this. Otherwise, there's a risk that the changes to the USB drive (either files being added or deleted) will not be "commited" and you could end up losing something. Sadly, the Supernote does not allow apps to eject USB drives, so Drive Sync takes you to "Storage" settings where you can eject the drive manually and the tap back to return to the app.
+It is recommended you do this. Otherwise, there's a risk that the changes to the USB drive (either files being added or deleted) will not be "commited" and you could end up losing something. Sadly, the Supernote does not allow apps to eject USB drives, so Drive Sync takes you to "Storage" settings where you can eject the drive manually and the tap back to return to the app:
 
 <img src="/assets/img/storage_settings_with_highlighted_eject_and_back_arrow.png" class="screenshot"/>
