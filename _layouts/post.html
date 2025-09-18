@@ -12,118 +12,120 @@
  -->
 
 <html lang="html">
-  <head>
-    <title>{{ page.title }}</title>
-    <meta charset="utf-8">
-    <meta name="description" content="{{ page.description }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@seadowg" />
-    <meta name="twitter:description" content="{{ page.description }}">
-    <meta name="twitter:title" content="{{ page.title }}" />
+<head>
+  <title>{{ page.title }}</title>
+  <meta charset="utf-8">
+  <meta name="description" content="{{ page.description }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/assets/css/syntax.css">
-    <link rel="stylesheet" href="/assets/css/shared.css">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@seadowg" />
+  <meta name="twitter:description" content="{{ page.description }}">
+  <meta name="twitter:title" content="{{ page.title }}" />
 
-    {% feed_meta %}
-    <style>
-      .container {
-        max-width: 800px;
-      }
+  <link rel="stylesheet" href="/assets/css/syntax.css">
+  <link rel="stylesheet" href="/assets/css/shared.css">
 
-      .contents {
-        font-size: 21px;
-        line-height: 1.5em;
-      }
+  {% feed_meta %}
+  <style>
+    .container {
+      max-width: 800px;
+    }
 
-      .contents h1 {
-        margin-top: 1.2em;
-      }
+    .contents {
+      font-size: 21px;
+      line-height: 1.5em;
+    }
 
+    .contents h1 {
+      margin-top: 1.2em;
+    }
+
+    code.highlighter-rouge {
+      font-size: 16px;
+      background: rgb(214, 216, 218);
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+      line-height: 1.5em;
+    }
+
+    .highlight {
+      font-size: 16px;
+      border-radius: 4px;
+      overflow-x: scroll;
+      background: #404040;
+      padding: 0.2em 0.8em;
+      line-height: 1.5em;
+    }
+
+    a {
+      color: rgb(9, 105, 218);
+    }
+
+    .title {
+      margin-bottom: 2em;
+    }
+
+    .subtitle {
+      font-style: italic;
+      font-size: 21px;
+    }
+
+    .edit-section {
+      font-style: italic;
+      margin-top: 2em;
+      font-size: 21px;
+      line-height: 1.3em;
+      background: rgb(217, 217, 217);
+      padding: 0.8em 1em;
+      border-radius: 4px;
+    }
+
+    .edit-title {
+      font-weight: bold;
+      margin-bottom: 0.2em;
+    }
+
+    img {
+      border-radius: 0.5%;
+    }
+
+    .responsive {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+    }
+
+    h2 {
+      margin-top: 1.2em;
+    }
+
+    @media (prefers-color-scheme: dark) {
       code.highlighter-rouge {
         font-size: 16px;
-        background: rgb(214, 216, 218);
+        background: rgb(99, 110, 123);
         padding: 0.2em 0.4em;
         border-radius: 4px;
         line-height: 1.5em;
       }
+    }
 
-      .highlight {
-        font-size: 16px;
-        border-radius: 4px;
-        overflow-x: scroll;
-        background: #404040;
-        padding: 0.2em 0.8em;
-        line-height: 1.5em;
+    @media only screen and (min-width: 1280px) {
+      .container {
+        margin: auto;
       }
+    }
+  </style>
+</head>
 
-      a {
-        color: rgb(9, 105, 218);
-      }
-
-      .title {
-        margin-bottom: 2em;
-      }
-
-      .subtitle {
-        font-style: italic;
-        font-size: 21px;
-      }
-
-      .edit-section {
-        font-style: italic;
-        margin-top: 2em;
-        font-size: 21px;
-        line-height: 1.3em;
-        background: rgb(217, 217, 217);
-        padding: 0.8em 1em;
-        border-radius: 4px;
-      }
-
-      .edit-title {
-        font-weight: bold;
-        margin-bottom: 0.2em;
-      }
-
-      img {
-        border-radius: 0.5%;
-      }
-
-      .responsive {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-      }
-
-      h2 {
-        margin-top: 1.2em;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        code.highlighter-rouge {
-          font-size: 16px;
-          background: rgb(99, 110, 123);
-          padding: 0.2em 0.4em;
-          border-radius: 4px;
-          line-height: 1.5em;
-        }
-      }
-
-      @media only screen and (min-width: 1280px) {
-        .container {
-          margin: auto;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>{{ page.title }}</h1>
-      <div class="subtitle">
-        {{ page.description | markdownify }}
-      </div>
-      <a href="/posts.html">< all posts</a href>
+<body>
+  <div class="container">
+    <h1>{{ page.title }}</h1>
+    <div class="subtitle">
+      {{ page.description | markdownify }}
+    </div>
+    <a href="/posts.html">< all posts</a href>
       {% if page.edit_date %}
         <div class="edit-section">
           <div class="edit-title">This post was last updated on {{ page.edit_date }}:</div>

@@ -2,8 +2,9 @@ body {
 	margin: 2em;
 }
 
-h1, h2 {
-	font-family: helvetica neue,helvetica,sans-serif;
+h1,
+h2 {
+	font-family: helvetica neue, helvetica, sans-serif;
 }
 
 a {
@@ -15,7 +16,7 @@ a {
 		color: white;
 		background: rgb(34, 39, 46)
 	}
-	
+
 	a {
 		color: rgb(83, 155, 245);
 	}

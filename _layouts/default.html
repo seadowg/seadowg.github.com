@@ -12,22 +12,25 @@
  -->
 
 <html lang="html">
-  <head>
-    <title>{{ page.title }}</title>
-    <meta charset="utf-8">
-    <meta name="description" content="{{ site.description }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="/assets/css/shared.css">
-    
-    {% feed_meta %}
-    <style>
-      .title {
-        margin-bottom: 2em;
-      }
-    </style>
-  </head>
-  <body>
-    {{ content }}
-  </body>
+
+<head>
+  <title>{{ page.title }}</title>
+  <meta charset="utf-8">
+  <meta name="description" content="{{ site.description }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/assets/css/shared.css">
+
+  {% feed_meta %}
+  <style>
+    .title {
+      margin-bottom: 2em;
+    }
+  </style>
+</head>
+
+<body>
+  {{ content }}
+</body>
+
 </html>
