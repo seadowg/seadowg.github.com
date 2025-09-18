@@ -51,10 +51,11 @@ If you haven't already formatted your USB drive, or it's been formatted with a f
 
 #### First connect
 
-![](sync_screen)
 <img src="/assets/img/sync_screen.png" class="screenshot"/>
 
 To initialize the formatted drive for use with Drive Sync, insert it into your Supernote, open the app and then tap "Sync" when it appears. This creates the file structure needed to transfer files to/from the Supernote.
+
+*Note: there is currently a bug in the Supernote OS that means that inserting a USB drive will sometimes create other directories such as `Alarms` and `Documents`.*
 
 ## Usage
 
