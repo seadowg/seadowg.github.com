@@ -1,0 +1,22 @@
+body {
+	margin: 2em;
+}
+
+h1, h2 {
+	font-family: helvetica neue,helvetica,sans-serif;
+}
+
+a {
+	color: rgb(9, 105, 218);
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		color: white;
+		background: rgb(34, 39, 46)
+	}
+	
+	a {
+		color: rgb(83, 155, 245);
+	}
+}

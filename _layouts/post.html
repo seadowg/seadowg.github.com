@@ -23,18 +23,11 @@
     <meta name="twitter:description" content="{{ page.description }}">
     <meta name="twitter:title" content="{{ page.title }}" />
 
-    <link rel="stylesheet" href="/syntax.css">
+    <link rel="stylesheet" href="/assets/css/syntax.css">
+    <link rel="stylesheet" href="/assets/css/shared.css">
 
     {% feed_meta %}
     <style>
-      body {
-        margin: 2em;
-      }
-
-      h1, h2 {
-        font-family: helvetica neue,helvetica,sans-serif;
-      }
-
       .container {
         max-width: 800px;
       }
@@ -108,15 +101,6 @@
       }
 
       @media (prefers-color-scheme: dark) {
-        body {
-          color: white;
-          background: rgb(34, 39, 46)
-        }
-
-        a {
-          color: rgb(83, 155, 245);
-        }
-
         code.highlighter-rouge {
           font-size: 16px;
           background: rgb(99, 110, 123);

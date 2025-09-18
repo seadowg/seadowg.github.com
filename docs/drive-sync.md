@@ -1,6 +1,6 @@
 ---
 title: Drive Sync
-layout: default
+layout: docs
 ---
 
 Drive Sync is an application for Supernote devices that helps you move files on and off them using a USB flash drive. This allows you to keep your Supernote's Wi-Fi off at all times increasing the security and privacy of the device as well as it's battery life.
@@ -13,15 +13,15 @@ To install Drive Sync, you'll need to ["sideload"](https://en.wikipedia.org/wiki
 
 Once the app is installed, it appear in "Apps" (under "My Apps") and can be added or removed from the sidebar in "Customize Sidebar".
 
-<img src="/assets/img/my_apps.png" style="max-height: 480px; width: auto; margin-left: auto; margin-right: auto; display: block; margin-top: 1.5em; margin-bottom: 2em;"/>
+<img src="/assets/img/my_apps.png" class="screenshot"/>
 
 ### Permissions
 
-<img src="/assets/img/permission_prompt.png" style="max-height: 480px; width: auto; margin-left: auto; margin-right: auto; display: block; margin-top: 1.5em; margin-bottom: 2em;"/>
+<img src="/assets/img/permission_prompt.png" class="screenshot"/>
 
 The first time you open the app, you will be asked to grant it permission to manage files. This allows Drive Sync to read and write from your `INBOX`/`EXPORT` and connected USB drives. After tapping "Grant permission" you'll be taken to the "All files access" settings screen:
 
-<img src="/assets/img/all_files_access_settings.png" style="max-height: 480px; width: auto; margin-left: auto; margin-right: auto; display: block; margin-top: 1.5em; margin-bottom: 2em;"/>
+<img src="/assets/img/all_files_access_settings.png" class="screenshot"/>
 
 From here you need to click on "Drive Sync", enable "Allow access to manage all files" and then tap the back arrow in the top left twice to return to the app.
 
@@ -52,7 +52,7 @@ If you haven't already formatted your USB drive, or it's been formatted with a f
 #### First connect
 
 ![](sync_screen)
-<img src="/assets/img/sync_screen.png" style="max-height: 480px; width: auto; margin-left: auto; margin-right: auto; display: block; margin-top: 1.5em; margin-bottom: 2em;"/>
+<img src="/assets/img/sync_screen.png" class="screenshot"/>
 
 To initialize the formatted drive for use with Drive Sync, insert it into your Supernote, open the app and then tap "Sync" when it appears. This creates the file structure needed to transfer files to/from the Supernote.
 
@@ -80,4 +80,4 @@ Once you've tapped sync and the files have all been moved, you'll be prompted to
 
 It is recommended you do this. Otherwise, there's a risk that the changes to the USB drive (either files being added or deleted) will not be "commited" and you could end up losing something. Sadly, the Supernote does not allow apps to eject USB drives, so Drive Sync takes you to "Storage" settings where you can eject the drive manually and the tap back to return to the app.
 
-<img src="/assets/img/storage_settings_with_highlighted_eject_and_back_arrow.png" style="max-height: 480px; width: auto; margin-left: auto; margin-right: auto; display: block; margin-top: 1.5em; margin-bottom: 2em;"/>
+<img src="/assets/img/storage_settings_with_highlighted_eject_and_back_arrow.png" class="screenshot"/>

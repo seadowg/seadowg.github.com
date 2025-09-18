@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<!--
+					_
+				   | |
+ ___  ___  __ _  __| | _____      ____ _
+/ __|/ _ \/ _` |/ _` |/ _ \ \ /\ / / _` |
+\__ \  __/ (_| | (_| | (_) \ V  V / (_| |
+|___/\___|\__,_|\__,_|\___/ \_/\_/ \__, |
+									__/ |
+								   |___/
+
+ -->
+
+<html lang="html">
+  <head>
+	<title>{{ page.title }}</title>
+	<meta charset="utf-8">
+	<meta name="description" content="{{ page.description }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@seadowg" />
+	<meta name="twitter:description" content="{{ page.description }}">
+	<meta name="twitter:title" content="{{ page.title }}" />
+	
+	<link rel="stylesheet" href="/assets/css/shared.css">
+	<link rel="stylesheet" href="/assets/css/screenshot.css">
+	<style>
+		body {
+			max-width: 800px;
+		}
+	</style>
+  </head>
+  <body>
+	<h1>{{ page.title }}</h1>
+	  <div class="contents">
+		{{ content }}
+	  </div>
+  </body>
+</html>
