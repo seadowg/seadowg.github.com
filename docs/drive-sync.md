@@ -3,7 +3,7 @@ title: Drive Sync
 layout: docs
 ---
 
-Drive Sync is an application for Supernote Nomad and Manta devices that helps you move files on and off them using a USB flash drive. This allows you to keep your Supernote’s Wi-Fi off at all times, increasing the security and privacy of the device, as well as it’s battery life.
+Drive Sync is an application for Supernote Nomad and Manta devices that helps you move files on and off them using a USB flash drive. This allows you to keep your Supernote’s Wi-Fi off at all times, increasing the security and privacy of the device, as well as its battery life.
 
 ## Setup
 
