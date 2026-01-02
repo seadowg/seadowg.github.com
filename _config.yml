@@ -4,6 +4,7 @@ description: Callum Stott is a senior software engineer and XP/Lean consultant w
 
 plugins:
   - jekyll-feed
+  - jekyll-redirect-from
 
 # Include these files/folders that are excluded by default
 include: [ "/.well-known" ]
