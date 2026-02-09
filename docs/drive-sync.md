@@ -83,6 +83,6 @@ Once you've tapped sync and the files have all been moved, you'll be prompted to
 
 <img src="/assets/img/eject_drive_prompt.png" style="max-height: 480px; width: auto; margin-left: auto; margin-right: auto; display: block; margin-top: 1.5em; margin-bottom: 2em;"/>
 
-It is recommended you do this. Otherwise, there's a risk that the changes to the USB drive (either files being added or deleted) will not be "commited" and you could end up losing something. Sadly, the Supernote does not allow apps to eject USB drives, so Drive Sync takes you to "Storage" settings where you can eject the drive manually and the tap back to return to the app:
+It is recommended you do this. Otherwise, there's a risk that the changes to the USB drive (either files being added or deleted) will not be "committed" and you could end up losing something. Sadly, the Supernote does not allow apps to eject USB drives, so Drive Sync takes you to "Storage" settings where you can eject the drive manually:
 
 <img src="/assets/img/storage_settings_with_highlighted_eject_and_back_arrow.png" class="screenshot"/>
