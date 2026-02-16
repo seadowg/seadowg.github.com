@@ -35,6 +35,8 @@ From here you need to click on "Drive Sync", enable "Allow access to manage all 
 
 Drive Sync works with any USB drive that the Supernote and the device(s) you want to move files to and from can read. Usually an exFAT formatted drive is the best for this, but it's important to note that the Supernote [does not support drives with special characters in the name](https://support.supernote.com/en_US/Tools-Features/usb-otg).
 
+**Note: Drive Sync will currently not work properly if you have an SD card inserted into your Supernote - it will likely sync to that instead of the USB drive.**
+
 #### Formatting
 
 If you haven't already formatted your USB drive, or it's been formatted with a file system that the Supernote does not support (like APFS) you'll need to use a computer to format it with exFAT. Follow the steps below to do this in whichever operating system you have.
