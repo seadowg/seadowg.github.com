@@ -59,8 +59,6 @@ If you haven't already formatted your USB drive, or it's been formatted with a f
 
 To initialize the formatted drive for use with Drive Sync, insert it into your Supernote, open the app and then tap "Sync" when it appears. This creates the file structure needed to transfer files to/from the Supernote.
 
-*Note: there is currently a bug in the Supernote OS that means that inserting a USB drive will sometimes create other directories such as `Alarms` and `Documents`.*
-
 ## Usage
 
 Drive Sync is designed to allow you to quickly and easily move files to/from the your device using Supernote's `INBOX` and `EXPORT` folder convention.
